@@ -7,10 +7,11 @@ import router from './Routes/index.routes.js';
 import mongoose from 'mongoose';
 
 const app = express ();
+dotenv.config()
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json())
-dotenv.config()
+
 
 app.get('/', function(req, res){
     res.send('homepage')
